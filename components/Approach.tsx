@@ -3,6 +3,7 @@ import React from "react";
  
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import Image from 'next/image';
 
 const Approach = () => {
     return (
@@ -104,13 +105,13 @@ const Approach = () => {
 
     const AceternityIcon = () => {
       return (
-        <img
-        src="raphnesia store 2.svg"
-        width="501"
-        height="500"
-        className="h-52 w-52 dark:text-white group-hover/canvas-card:text-white  "
-        >
-        </img>
+        <Image
+          src="/raphnesia store 2.svg"
+          width={501}
+          height={500}
+          alt="Raphnesia Store Icon"
+          className="h-52 w-52 dark:text-white group-hover/canvas-card:text-white"
+        />
       );
     };
      
