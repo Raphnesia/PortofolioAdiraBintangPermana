@@ -3,7 +3,6 @@ import React from 'react'
 import { RainbowButton } from './ui/RainbowButton'
 import { PlaceholdersAndVanishInput } from './ui/placeholders-and-vanish-input'
 
-
 export const Footer = () => {
     const placeholders = [
         "Apa Cita - Cita Kamu ?",
@@ -39,3 +38,4 @@ export const Footer = () => {
 }
 
 export default Footer;
+
