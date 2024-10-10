@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { BackgroundGradient } from "../ui/BackgroundGradient";
-import {RgbContainer} from "../ui/BackgroundGradient"
+import { BackgroundGradient } from "../BackgroundGradient";
 import { IconAppWindow } from "@tabler/icons-react";
 import Image from "next/image";
 
