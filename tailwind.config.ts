@@ -1,13 +1,10 @@
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
-
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -22,8 +19,11 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
-        'sm': '200px',
+        '2xl': "1400px",
+        'sm': "500px", // Ubah sm di sini
+        'md': "768px",
+        'lg': "1024px",
+        'xl': "1280px",
       },
     },
     extend: {
@@ -40,13 +40,13 @@ const config = {
           200: "#C1C2D3",
         },
         blue: {
-          "100": "#E4ECFF",
+          100: "#E4ECFF",
         },
         pink: {
-          "600":"#db2777",
+          600: "#db2777",
         },
         yellow: {
-          "400":"#fbbf24",
+          400: "#fbbf24",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -88,7 +88,6 @@ const config = {
           "color-4": "hsl(var(--color-4))",
           "color-5": "hsl(var(--color-5))",
         },
-
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
@@ -107,14 +106,13 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        'infinite-scroll': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
-          
+        "infinite-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
-        'infinite-scroll-right': {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
+        "infinite-scroll-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
         },
         rainbow: {
           "0%": { "background-position": "0%" },
@@ -189,10 +187,9 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-        'infinite-scroll': 'infinite-scroll 20s linear infinite',
-        'infinite-scroll-right': 'infinite-scroll-right 10s linear infinite',
-        rainbow: "rainbow var(--speed, 2s) infinite linear"
-
+        "infinite-scroll": "infinite-scroll 20s linear infinite",
+        "infinite-scroll-right": "infinite-scroll-right 10s linear infinite",
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
       },
     },
   },
@@ -222,7 +219,7 @@ const config = {
       );
     },
   ],
-} satisfies Config;
+};
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
