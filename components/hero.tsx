@@ -51,7 +51,7 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-100 mb-4">
             Portofolio dibuat dengan React dan Framework Next.js
           </h2>
-          <div className="text-center font-bold text-[40px] md:text-5xl lg:text-6xl md:tracking-normal mb-1 mr-2">
+          <div className="text-center font-bold text-base sm:text-sm md:text-5xl lg:text-6xl md:tracking-normal mb-1 mr-2">
             Halo, 
             <FlipWords
               className="text-center font-extrabold text-[40px] md:text-5xl lg:text-6xl md:tracking-normal mb-4"
@@ -115,69 +115,33 @@ const Hero = () => {
           </div>
           
 
-          <div className="text-center text-[30px] smmd:text-5xl lg:text-6xl md:tracking-normal p-5">
-            <h2 className='text-center text-5xl sm:text-3xl font-bold mb-1 md:mb-0 '> About 
-            <FlipWords
-              className="text-center text-5xl sm:text-3xl font-bold mb-1 md:mb-0"
-              words={[
-                " / Tentang",
-                " / Bab Kula",
-                " / Parkara Kaulâh",
-                " / 私について",
-                " / Men haqimda",
-                " / 关于我",
-              ]}
-            />
-            </h2>
-            <p className="text-justify font-extralight md:tracking-wider mb-4 mt-5 sm:text-sm lg:text-xl text-blue-100 max-w-100">
-            Hai, saya Junior IT Developer dari Kabupaten Sukoharjo, Jawa Tengah, yang saat ini open untuk bekerja pada perusahaan / freelance. 
-            Saya suka sekali belajar dan berkembang dalam teknologi masa kini dan masa datang, seperti pengembangan augmented reality, virtual reality 
-            dan pengembangan teknologi lain yang memberikan dampak yang nyata bagi dunia, indonesia dan tentunya saya sendiri. Saya Selalu bersemangat 
-            dengan belajar dan mengembangkan teknologi baru dan merilis karya saya untuk menjaga ekosistem tetap aktif. Saat saya tidak mendalami kode, 
-            saya bermain game tentu saja saya suka Honor Of Kings, mendengarkan musik, Menonton Video Youtube atau membaca komik. Inspirasi saya ? 
-            Tentu saja ORANG TUA SAYA, Mereka yang terbaik dan sangat penting untuk hidup saya. See you on the top ALL!.
+          <div className="text-center text-lg sm:text-2xl md:text-5xl lg:text-6xl p-5">
+            <h2 className="font-bold mb-4">Tentang / About</h2>
+            <p className="text-justify font-light sm:text-sm lg:text-xl text-blue-100 mb-4">
+              Hai, saya Junior IT Developer dari Kabupaten Sukoharjo, Jawa Tengah, yang saat ini open untuk bekerja pada perusahaan / freelance. Saya suka sekali belajar dan berkembang dalam teknologi masa kini dan masa datang, seperti pengembangan augmented reality, virtual reality dan pengembangan teknologi lain yang memberikan dampak yang nyata bagi dunia, indonesia dan tentunya saya sendiri. Saya Selalu bersemangat dengan belajar dan mengembangkan teknologi baru dan merilis karya saya untuk menjaga ekosistem tetap aktif. Saat saya tidak mendalami kode, saya bermain game tentu saja saya suka Honor Of Kings, mendengarkan musik, Menonton Video Youtube atau membaca komik. Inspirasi saya? Tentu saja ORANG TUA SAYA, Mereka yang terbaik dan sangat penting untuk hidup saya. See you on the top ALL!
             </p>
-            <p className="text-justify font-extralight md:tracking-wider sm:text-sm mb-4 mt-5 lg:text-xl text-blue-100 max-w-100">
-            Hi, I'm a Junior IT developer from Sukoharjo Regency, Central Java, who is currently open to work in a company / freelance. 
-            I love learning and developing in today's and future of technology, such as the development of augmented reality, virtual reality 
-            and the development of other technologies that have a real impact on the world, Indonesia and of course myself. 
-            I am always excited about learning and developing new technologies and releasing my work to keep the ecosystem active.
-            When I'm not delving into code, I play games of course I like Honor Of Kings, listen to music, Watch Youtube Videos or read comics. 
-            My inspiration? Of course MY PARENTS, They are the best and very important to my life. See you on the top ALL!.
+            <p className="text-justify font-light sm:text-sm lg:text-xl text-blue-100">
+              Hi, I'm a Junior IT developer from Sukoharjo Regency, Central Java, who is currently open to work in a company / freelance. I love learning and developing in today's and future of technology, such as the development of augmented reality, virtual reality and the development of other technologies that have a real impact on the world, Indonesia and of course myself. I am always excited about learning and developing new technologies and releasing my work to keep the ecosystem active. When I'm not delving into code, I play games of course I like Honor Of Kings, listen to music, Watch Youtube Videos or read comics. My inspiration? Of course MY PARENTS, They are the best and very important to my life. See you on the top ALL!
             </p>
           </div>
-          
-          <div className="text-center text-[30px] sm:text-2xl md:text-5xl lg:text-6xl md:tracking-normal mb-7 p-5">
-            <a className="flex flex-col items-center justify-center sm:text-2xl relative" href="#about">
-              <ShimmerButton 
-                title="Tunjukan Hasil Kerja Saya"
-                icon={<IoNavigateOutline />}
-                position="right"
-              />
+
+          <div className="text-center mb-7 p-5">
+            <a className="flex flex-col items-center justify-center relative" href="#about">
+              <ShimmerButton title="Tunjukan Hasil Kerja Saya" icon={<IoNavigateOutline />} position="right" />
             </a>
           </div>
-        <div className="flex flex-wrap lg:gap-2 ml-6 mr-6 max-w-100 justify-center mt-7">
-            <InfiniteScrollAnimation />
-        </div>
-      </div>
-        <motion.div 
-          className= "absolute left-[10vw] top-[-10vw] sm:max-w-screen-sm sm:left-[-20vw] sm:top-[-35vw] md:left-[10vw] md:top-[-21vw] lg:left-[-5vw] lg:top-[-2vw]" 
-          drag
-        >
-          <Image
-            src={vrPic}
-            height="245"
-            width="245"
-            alt="reality"
-            className=""
-            draggable="false"
-          />
-        </motion.div>
 
-        
+          <div className="flex flex-wrap lg:gap-2 ml-6 mr-6 max-w-100 justify-center mt-7">
+            <InfiniteScrollAnimation />
+          </div>
+        </div>
+
+        <motion.div className="absolute left-[-35vw] top-[-40vw] sm:left-[10vw] sm:top-[-10vw] md:left-[10vw] md:top-[-21vw] lg:left-[-5vw] lg:top-[-2vw]"  drag>
+          <Image src={vrPic} height="245" width="245" alt="reality" className="" draggable="false" />
+        </motion.div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
